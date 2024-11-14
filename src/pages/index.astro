@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import TestimonialSlider from '../components/TestimonialSlider';
+import AboutUs from '../components/AboutUs.astro';
+import TeamSection from '../components/TeamSection.astro';
+---
+
+<Layout title="Nemco-Net">
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-primary-light/10 to-secondary-light/10 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+        <div class="text-left">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-8">
+            Transforma tus ideas en
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-dark via-accent-dark to-secondary-dark">soluciones digitales</span>
+          </h1>
+          <p class="text-xl text-gray-600 dark:text-gray-300 mb-12">
+            Creamos aplicaciones hermosas, responsivas y amigables que ayudan a los negocios a crecer y triunfar en el mundo digital.
+          </p>
+          <div class="flex gap-4">
+            <a
+              href="/contacto"
+              class="inline-flex items-center px-8 py-3 rounded-full text-lg font-medium text-white bg-gradient-to-r from-primary-dark via-accent-dark to-secondary-dark hover:from-primary hover:via-accent hover:to-secondary transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+            >
+              Inicia tu Proyecto
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            src="src/assets/img/cat-keyboard.webp"
+            alt="Gato Programador"
+            class="rounded-2xl shadow-2xl transform hover:scale-105 transition-duration-300 w-full max-w-md mx-auto"
+          />
+          <div class="absolute -z-10 top-0 right-0 w-72 h-72 bg-accent-light dark:bg-accent-dark rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
+          <div class="absolute -z-10 bottom-0 left-0 w-72 h-72 bg-secondary-light dark:bg-secondary-dark rounded-full filter blur-3xl opacity-30 animate-pulse delay-700"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <AboutUs />
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">
+          Nuestros Servicios
+        </h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ServiceCard
+            title="Desarrollo Web"
+            description="Aplicaciones web personalizadas construidas con tecnologías modernas y mejores prácticas, garantizando escalabilidad, rendimiento y seguridad."
+            icon="web"
+            color="primary"
+          />
+          <ServiceCard
+            title="Desarrollo Móvil"
+            description="Aplicaciones nativas y multiplataforma que proporcionan experiencias de usuario perfectas en todos los dispositivos."
+            icon="mobile"
+            color="accent"
+          />
+          <ServiceCard
+            title="Soluciones Cloud"
+            description="Infraestructura y servicios en la nube escalables que potencian tus aplicaciones con fiabilidad y rendimiento."
+            icon="cloud"
+            color="primary"
+          />
+          <ServiceCard
+            title="Integración IA"
+            description="Soluciones de inteligencia artificial de vanguardia para automatizar procesos y mejorar la toma de decisiones."
+            icon="ai"
+            color="accent"
+          />
+          <ServiceCard
+            title="Consultoría Técnica"
+            description="Asesoramiento experto en estrategia tecnológica, arquitectura e implementación para alcanzar tus objetivos empresariales."
+            icon="consulting"
+            color="primary"
+          />
+          <ServiceCard
+            title="Landing Pages"
+            description="Páginas de aterrizaje de alta conversión diseñadas para captar leads y mostrar tus productos de manera efectiva."
+            icon="landing"
+            color="accent"
+          />
+        </div>
+      </div>
+    </section>
+
+        <!-- Team Section -->
+        <TeamSection />
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-secondary-light/10 to-accent-light/10 dark:from-gray-800 dark:to-gray-900">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-16">
+          Lo que Dicen Nuestros Clientes
+        </h2>
+        <TestimonialSlider client:load />
+      </div>
+    </section>
+  </main>
+  
+</Layout>

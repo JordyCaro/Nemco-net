@@ -1,0 +1,76 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title,
+  description = "Transform your ideas into digital solutions with our expert web development services"
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+    <link rel="preconnect" href="https://i.pravatar.cc" />
+    <link rel="dns-prefetch" href="https://i.pravatar.cc" />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" as="image" href="/assets/img/catStarts.webp" fetchpriority="high" />
+    
+    <!-- Critical CSS -->
+    <style is:inline>
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400 700;
+        font-display: swap;
+        src: url('/fonts/inter-var.woff2') format('woff2-variations');
+      }
+      
+      :root {
+        color-scheme: light dark;
+      }
+      
+      .no-js {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-gray-900 transition-colors duration-300">
+    <Header />
+    <slot />
+    <Footer />
+    
+    <script is:inline>
+      (() => {
+        const getThemePreference = () => {
+          if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+            return localStorage.getItem('theme');
+          }
+          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
+
+        const theme = getThemePreference();
+        document.documentElement.classList.toggle('dark', theme === 'dark');
+
+        window.addEventListener('storage', () => {
+          const theme = getThemePreference();
+          document.documentElement.classList.toggle('dark', theme === 'dark');
+        });
+      })();
+    </script>
+  </body>
+</html>
