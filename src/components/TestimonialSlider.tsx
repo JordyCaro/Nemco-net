@@ -1,10 +1,15 @@
 import { useState } from 'react';
+import CarlosImg from '../assets/img/carlos.jpg';
+import MarianaImg from '../assets/img/mariana.jpg';
+import JorgeImg from '../assets/img/jorgel.jpg';
+import SofiaImg from '../assets/img/sofia.jpg';
+import AndresImg from '../assets/img/andres.jpg';
 
 interface Testimonial {
   name: string;
   company: string;
   role: string;
-  image: string;
+  image: any;
   testimonial: string;
   rating: number;
   project: string;
@@ -15,7 +20,7 @@ const testimonials: Testimonial[] = [
     name: "Carlos Martínez",
     company: "Café y Tecnología",
     role: "Fundador",
-    image: "src/assets/img/carlos.jpg",
+    image: CarlosImg,
     testimonial: "Gracias a Nemco-Net, pudimos lanzar nuestra nueva página web para vender nuestros productos online. Su trabajo fue excepcional y nos ayudaron a entender el proceso de desarrollo.",
     rating: 5,
     project: "E-commerce para ventas de café"
@@ -24,7 +29,7 @@ const testimonials: Testimonial[] = [
     name: "Mariana Rodríguez",
     company: "M&R Soluciones",
     role: "Directora Comercial",
-    image: "src/assets/img/mariana.jpg",
+    image: MarianaImg,
     testimonial: "Nuestro nuevo sistema de gestión de clientes fue todo un éxito. El equipo de Nemco-Net fue muy profesional, cumpliendo con los tiempos y entregando exactamente lo que necesitábamos.",
     rating: 5,
     project: "Sistema CRM para pequeña empresa"
@@ -33,7 +38,7 @@ const testimonials: Testimonial[] = [
     name: "Jorge González",
     company: "TechMovil",
     role: "Co-Fundador",
-    image: "src/assets/img/jorgel.jpg",
+    image: JorgeImg,
     testimonial: "El equipo de Nemco-Net transformó nuestra idea en una plataforma funcional, ¡y todo con un diseño increíble! La experiencia de trabajar con ellos fue muy satisfactoria.",
     rating: 5,
     project: "Aplicación móvil para ventas"
@@ -42,7 +47,7 @@ const testimonials: Testimonial[] = [
     name: "Sofía Martínez",
     company: "Aventura Verde",
     role: "Gerente de Proyecto",
-    image: "src/assets/img/sofia.jpg",
+    image: SofiaImg,
     testimonial: "La solución que desarrollaron para nuestro sitio web nos permitió expandir nuestras operaciones. ¡La atención al cliente fue excelente y los resultados aún mejores!",
     rating: 5,
     project: "Web para servicios turísticos"
@@ -51,7 +56,7 @@ const testimonials: Testimonial[] = [
     name: "Andrés Gómez",
     company: "Gómez Consulting",
     role: "Consultor Principal",
-    image: "src/assets/img/andres.jpg",
+    image: AndresImg,
     testimonial: "Los desarrolladores de Nemco-Net comprendieron nuestras necesidades de negocio y crearon una plataforma perfecta para nuestro equipo. Altamente recomendados.",
     rating: 5,
     project: "Plataforma de asesoría en línea"
@@ -118,7 +123,7 @@ export default function TestimonialSlider() {
             >
               <div className="bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg flex flex-col items-center text-center h-full">
                 <img
-                  src={testimonial.image}
+                  src={testimonial.image.src}
                   alt={testimonial.name}
                   className="w-20 h-20 rounded-full object-cover border-4 border-primary-light dark:border-primary-dark mb-4"
                 />
