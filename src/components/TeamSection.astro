@@ -1,4 +1,8 @@
 ---
+import { Image } from 'astro:assets';
+import jordy from '../assets/img/profile.jpg';
+import Nemo from '../assets/img/Img-nemo.jpeg';
+
 ---
 
 <section id="team" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary-light/5 via-secondary-light/5 to-accent-light/5 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800">
@@ -16,8 +20,8 @@
       <!-- Jhordan Card -->
       <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 max-w-md mx-auto">
         <div class="flex justify-center pt-6">
-          <img
-            src="src/assets/img/profile.jpg"
+          <Image
+            src={jordy}
             alt="Jhordan Caro"
             class="object-cover h-32 w-32 rounded-full border-4 border-primary-light dark:border-primary-dark"
           />
@@ -42,8 +46,8 @@
       <!-- Nemo Card -->
       <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300 max-w-md mx-auto">
         <div class="flex justify-center pt-6">
-          <img
-            src="src/assets/img/Img-nemo.jpeg"
+          <Image
+            src={Nemo}
             alt="Nemo"
             class="object-cover h-32 w-32 rounded-full border-4 border-accent-light dark:border-accent-dark"
           />

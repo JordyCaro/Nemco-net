@@ -4,6 +4,9 @@ import ServiceCard from '../components/ServiceCard.astro';
 import TestimonialSlider from '../components/TestimonialSlider';
 import AboutUs from '../components/AboutUs.astro';
 import TeamSection from '../components/TeamSection.astro';
+import { Image } from 'astro:assets';
+import catKeyboard from '../assets/img/cat-keyboard.webp';
+
 ---
 
 <Layout title="Nemco-Net">
@@ -29,8 +32,8 @@ import TeamSection from '../components/TeamSection.astro';
           </div>
         </div>
         <div class="relative">
-          <img
-            src="src/assets/img/cat-keyboard.webp"
+          <Image
+            src={catKeyboard}
             alt="Gato Programador"
             class="rounded-2xl shadow-2xl transform hover:scale-105 transition-duration-300 w-full max-w-md mx-auto"
           />
