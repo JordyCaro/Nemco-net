@@ -1,0 +1,86 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ServiceHero from '../../components/ServiceHero.astro';
+import ServiceFeatures from '../../components/ServiceFeatures.astro';
+import ServiceTechnologies from '../../components/ServiceTechnologies.astro';
+import ServiceProcess from '../../components/ServiceProcess.astro';
+
+const features = [
+  {
+    title: "Auditoría de Seguridad",
+    description: "Evaluación exhaustiva de vulnerabilidades y riesgos en tu infraestructura tecnológica.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />`
+  },
+  {
+    title: "Protección de Datos",
+    description: "Implementación de sistemas de encriptación y protocolos de seguridad para proteger información sensible.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />`
+  },
+  {
+    title: "Monitoreo Continuo",
+    description: "Vigilancia 24/7 de tu infraestructura para detectar y responder a amenazas en tiempo real.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />`
+  }
+];
+
+const technologies = [
+  "Nmap",
+  "Wireshark",
+  "Metasploit",
+  "Snort",
+  "OpenVAS",
+  "Kali Linux",
+  "Burp Suite",
+  "OWASP ZAP"
+];
+
+const steps = [
+  {
+    title: "Evaluación",
+    description: "Análisis inicial de tu infraestructura y necesidades de seguridad."
+  },
+  {
+    title: "Planificación",
+    description: "Desarrollo de estrategias personalizadas de protección."
+  },
+  {
+    title: "Implementación",
+    description: "Despliegue de soluciones y protocolos de seguridad."
+  },
+  {
+    title: "Monitoreo",
+    description: "Vigilancia continua y mejora de la seguridad."
+  }
+];
+---
+
+<ServiceLayout 
+  title="Ciberseguridad" 
+  description="Protege tu negocio digital con soluciones avanzadas de ciberseguridad."
+  color="accent"
+>
+  <ServiceHero
+    title="Ciberseguridad"
+    description="Protege tus activos digitales con nuestras soluciones avanzadas de ciberseguridad. Nuestro equipo de expertos implementa las mejores prácticas y tecnologías para mantener tu negocio seguro en el mundo digital."
+    image="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070"
+    color="accent"
+  />
+
+  <ServiceFeatures features={features} color="accent" />
+  
+  <ServiceTechnologies technologies={technologies} color="accent" />
+  
+  <ServiceProcess steps={steps} color="accent" />
+
+  <div class="text-center">
+    <a 
+      href="/contacto" 
+      class="inline-flex items-center px-8 py-4 rounded-xl text-white bg-gradient-to-r from-accent-dark to-accent hover:from-accent hover:to-accent-dark transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+    >
+      Protege tu Negocio
+      <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </a>
+  </div>
+</ServiceLayout>

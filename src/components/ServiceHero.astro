@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  color: string;
+}
+
+const { title, description, image, color } = Astro.props;
+---
+
+<div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+  <div>
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-8">
+      {title}
+      <span class={`text-${color}-dark dark:text-${color}-light`}></span>
+    </h1>
+    <p class="text-xl text-gray-600 dark:text-gray-300 mb-12">
+      {description}
+    </p>
+    <div class="flex gap-4">
+      <a
+        href="/contacto"
+        class={`inline-flex items-center px-8 py-3 rounded-full text-lg font-medium text-white bg-gradient-to-r from-${color}-dark to-${color} hover:from-${color} hover:to-${color}-dark transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl`}
+      >
+        Solicitar Información
+      </a>
+    </div>
+  </div>
+  <div class="relative">
+    <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-duration-300">
+      <img 
+        src={image}
+        alt={title}
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <div class={`absolute -z-10 top-0 right-0 w-72 h-72 bg-${color}-light dark:bg-${color}-dark rounded-full filter blur-3xl opacity-30 animate-pulse`}></div>
+    <div class={`absolute -z-10 bottom-0 left-0 w-72 h-72 bg-${color}-light dark:bg-${color}-dark rounded-full filter blur-3xl opacity-30 animate-pulse delay-700`}></div>
+  </div>
+</div>

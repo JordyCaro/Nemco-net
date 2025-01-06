@@ -1,0 +1,170 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { Image } from 'astro:assets';
+
+const title = "Inteligencia Artificial";
+const description = "Soluciones de IA innovadoras que transforman datos en decisiones inteligentes.";
+---
+
+<ServiceLayout {title} {description} color="primary">
+  <article class="prose prose-lg dark:prose-invert max-w-none">
+    <h1 class="text-4xl font-bold text-center mb-8">{title}</h1>
+    
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+      <div>
+        <p class="text-xl mb-6">
+          Potenciamos tu negocio con soluciones de Inteligencia Artificial que automatizan procesos, 
+          predicen tendencias y mejoran la toma de decisiones. Convertimos datos complejos en 
+          insights accionables.
+        </p>
+        <div class="flex gap-4">
+          <a href="/contacto" class="inline-flex items-center px-6 py-3 rounded-lg text-white bg-primary-dark hover:bg-primary transition-colors duration-200">
+            Explorar Soluciones
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=2070"
+            alt="Inteligencia Artificial"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Soluciones de IA</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Chatbots Inteligentes</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Procesamiento de lenguaje natural</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Respuestas contextuales</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Integración multicanal</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Análisis Predictivo</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Predicción de tendencias</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Optimización de recursos</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Detección de anomalías</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Computer Vision</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Reconocimiento de objetos</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Análisis de imágenes</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Control de calidad visual</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Tecnologías y Frameworks</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {[
+          "TensorFlow",
+          "PyTorch",
+          "scikit-learn",
+          "OpenAI API",
+          "Keras",
+          "NLTK",
+          "OpenCV",
+          "Pandas"
+        ].map(tech => (
+          <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow flex items-center justify-center">
+            <span class="text-lg font-medium">{tech}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Proceso de Implementación</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {[
+          {
+            title: "Análisis de Datos",
+            description: "Evaluación y preparación de datos para entrenamiento."
+          },
+          {
+            title: "Diseño de Modelo",
+            description: "Selección y configuración de algoritmos óptimos."
+          },
+          {
+            title: "Entrenamiento",
+            description: "Refinamiento iterativo para máxima precisión."
+          },
+          {
+            title: "Implementación",
+            description: "Despliegue y monitoreo continuo."
+          }
+        ].map(step => (
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-3">{step.title}</h3>
+            <p class="text-gray-600 dark:text-gray-300">{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <div class="text-center">
+      <a href="/contacto" class="inline-flex items-center px-8 py-4 rounded-xl text-white bg-gradient-to-r from-primary-dark to-primary hover:from-primary hover:to-primary-dark transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+        Potencia tu Negocio con IA
+        <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </article>
+</ServiceLayout>

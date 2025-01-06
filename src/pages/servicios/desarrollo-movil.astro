@@ -1,0 +1,143 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { Image } from 'astro:assets';
+
+const title = "Desarrollo Móvil";
+const description = "Aplicaciones móviles nativas y multiplataforma que transforman tu visión en experiencias móviles excepcionales.";
+---
+
+<ServiceLayout {title} {description} color="accent">
+  <article class="prose prose-lg dark:prose-invert max-w-none">
+    <h1 class="text-4xl font-bold text-center mb-8">{title}</h1>
+    
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+      <div>
+        <p class="text-xl mb-6">
+          Creamos aplicaciones móviles que destacan en las tiendas de aplicaciones. Nuestro enfoque se centra en crear 
+          experiencias móviles intuitivas que tus usuarios amarán usar, combinando diseño atractivo con funcionalidad 
+          potente.
+        </p>
+        <div class="flex gap-4">
+          <a href="/contacto" class="inline-flex items-center px-6 py-3 rounded-lg text-white bg-accent-dark hover:bg-accent transition-colors duration-200">
+            Solicitar Presupuesto
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=2070"
+            alt="Desarrollo Móvil"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">¿Por qué una App Móvil?</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        {[
+          {
+            title: "Acceso Directo",
+            description: "Tu negocio en el bolsillo de tus clientes 24/7, aumentando engagement y retención."
+          },
+          {
+            title: "Experiencia Optimizada",
+            description: "Interfaces diseñadas específicamente para móviles, aprovechando todas las capacidades del dispositivo."
+          },
+          {
+            title: "Ventaja Competitiva",
+            description: "Destaca en tu mercado con una presencia móvil profesional y funcional."
+          }
+        ].map(benefit => (
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-3">{benefit.title}</h3>
+            <p class="text-gray-600 dark:text-gray-300">{benefit.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Nuestros Servicios Móviles</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold mb-4">Apps Nativas</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Desarrollo iOS (Swift/SwiftUI)
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Desarrollo Android (Kotlin)
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Rendimiento Optimizado
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold mb-4">Apps Multiplataforma</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              React Native
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Flutter
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Desarrollo más rápido y económico
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Características Destacadas</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        {[
+          "Notificaciones Push",
+          "Modo Offline",
+          "Geolocalización",
+          "Analíticas",
+          "Pagos In-App",
+          "Autenticación",
+          "Sincronización",
+          "Personalización"
+        ].map(feature => (
+          <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow flex items-center justify-center text-center">
+            <span class="text-lg font-medium">{feature}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <div class="text-center">
+      <a href="/contacto" class="inline-flex items-center px-8 py-4 rounded-xl text-white bg-gradient-to-r from-accent-dark to-accent hover:from-accent hover:to-accent-dark transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+        Desarrolla tu App Móvil
+        <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </article>
+</ServiceLayout>

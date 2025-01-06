@@ -1,0 +1,165 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { Image } from 'astro:assets';
+
+const title = "Soluciones Cloud";
+const description = "Infraestructura en la nube escalable y segura para potenciar tu negocio digital.";
+---
+
+<ServiceLayout {title} {description} color="secondary">
+  <article class="prose prose-lg dark:prose-invert max-w-none">
+    <h1 class="text-4xl font-bold text-center mb-8">{title}</h1>
+    
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+      <div>
+        <p class="text-xl mb-6">
+          Optimizamos y modernizamos tu infraestructura tecnológica con soluciones cloud de última generación. 
+          Diseñamos arquitecturas escalables que crecen con tu negocio, garantizando seguridad, rendimiento y 
+          disponibilidad.
+        </p>
+        <div class="flex gap-4">
+          <a href="/contacto" class="inline-flex items-center px-6 py-3 rounded-lg text-white bg-secondary-dark hover:bg-secondary transition-colors duration-200">
+            Solicitar Consulta
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2072"
+            alt="Cloud Computing"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Servicios Cloud</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Migración a la Nube</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-secondary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Evaluación y planificación de migración</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-secondary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Migración sin tiempo de inactividad</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-secondary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Optimización post-migración</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Arquitectura Cloud</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-secondary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Diseño de arquitectura serverless</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-secondary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Microservicios y contenedores</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-secondary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Alta disponibilidad y redundancia</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">DevOps & Automatización</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-secondary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>CI/CD Pipelines</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-secondary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Infraestructura como código</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-secondary-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Monitoreo y alertas</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Tecnologías Cloud</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {[
+          "AWS", "Azure", "Google Cloud",
+          "Docker", "Kubernetes", "Terraform",
+          "Jenkins", "GitLab CI"
+        ].map(tech => (
+          <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow flex items-center justify-center">
+            <span class="text-lg font-medium">{tech}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Beneficios Cloud</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {[
+          {
+            title: "Escalabilidad",
+            description: "Crece según tus necesidades sin inversiones iniciales masivas."
+          },
+          {
+            title: "Seguridad",
+            description: "Protección de datos y cumplimiento normativo garantizado."
+          },
+          {
+            title: "Rendimiento",
+            description: "Optimización continua para máxima velocidad y eficiencia."
+          },
+          {
+            title: "Costos",
+            description: "Paga solo por lo que uses, sin gastos innecesarios."
+          }
+        ].map(benefit => (
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-3">{benefit.title}</h3>
+            <p class="text-gray-600 dark:text-gray-300">{benefit.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <div class="text-center">
+      <a href="/contacto" class="inline-flex items-center px-8 py-4 rounded-xl text-white bg-gradient-to-r from-secondary-dark to-secondary hover:from-secondary hover:to-secondary-dark transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+        Moderniza tu Infraestructura
+        <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </article>
+</ServiceLayout>

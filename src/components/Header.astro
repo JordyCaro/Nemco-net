@@ -1,13 +1,16 @@
 ---
 import ThemeToggle from './ThemeToggle';
 import LanguageToggle from './LanguageToggle';
+import ServiceDropdown from './ServiceDropdown';
+import ProductDropdown from './ProductDropdown';
 ---
 
-<header class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50">
+<header class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center py-4">
-      <div class="flex items-center">
-        <a href="/" class="text-2xl font-bold text-primary-dark dark:text-primary-light">
+      <div class="flex items-center gap-2">
+        <!-- <img src="/logo.svg" alt="Nemco-Net Logo" class="h-10 w-auto" /> -->
+        <a href="/" class="text-2xl font-bold text-primary-dark dark:text-primary-light hover:scale-105 transition-transform duration-200">
           Nemco-Net
         </a>
       </div>
@@ -16,8 +19,10 @@ import LanguageToggle from './LanguageToggle';
         <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-primary-dark dark:hover:text-primary-light">
           Nosotros
         </a>
+        <ServiceDropdown client:load />
+        <ProductDropdown client:load />
         <a href="#services" class="text-gray-700 dark:text-gray-300 hover:text-primary-dark dark:hover:text-primary-light">
-          Servicios
+          Más Servicios
         </a>
         <a href="#team" class="text-gray-700 dark:text-gray-300 hover:text-primary-dark dark:hover:text-primary-light">
           Equipo

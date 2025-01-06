@@ -1,0 +1,80 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import ServiceHero from '../../components/ServiceHero.astro';
+import ServiceFeatures from '../../components/ServiceFeatures.astro';
+import ServiceTechnologies from '../../components/ServiceTechnologies.astro';
+import ServiceProcess from '../../components/ServiceProcess.astro';
+
+const features = [
+  {
+    title: "Desarrollo Frontend",
+    description: "Interfaces modernas y responsivas que cautivan a tus usuarios desde el primer momento.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`
+  },
+  {
+    title: "Desarrollo Backend",
+    description: "APIs robustas y escalables que potencian tu aplicación con seguridad y rendimiento.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />`
+  },
+  {
+    title: "Optimización SEO",
+    description: "Mejora tu visibilidad en buscadores y atrae más tráfico orgánico a tu sitio.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />`
+  }
+];
+
+const technologies = [
+  "React", "Next.js", "Vue.js", "Node.js",
+  "TypeScript", "GraphQL", "MongoDB", "PostgreSQL"
+];
+
+const steps = [
+  {
+    title: "Planificación",
+    description: "Analizamos tus necesidades y definimos la mejor estrategia."
+  },
+  {
+    title: "Diseño",
+    description: "Creamos interfaces intuitivas centradas en el usuario."
+  },
+  {
+    title: "Desarrollo",
+    description: "Implementamos tu solución con las mejores prácticas."
+  },
+  {
+    title: "Lanzamiento",
+    description: "Desplegamos y optimizamos tu aplicación."
+  }
+];
+---
+
+<ServiceLayout 
+  title="Desarrollo Web" 
+  description="Creamos aplicaciones web modernas y escalables que impulsan el crecimiento de tu negocio."
+  color="primary"
+>
+  <ServiceHero
+    title="Desarrollo Web"
+    description="Transformamos tu visión en experiencias web excepcionales. Nuestro equipo de expertos combina creatividad y tecnología para crear soluciones web que no solo se ven increíbles, sino que también impulsan resultados comerciales reales."
+    image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2015"
+    color="primary"
+  />
+
+  <ServiceFeatures features={features} color="primary" />
+  
+  <ServiceTechnologies technologies={technologies} color="primary" />
+  
+  <ServiceProcess steps={steps} color="primary" />
+
+  <div class="text-center">
+    <a 
+      href="/contacto" 
+      class="inline-flex items-center px-8 py-4 rounded-xl text-white bg-gradient-to-r from-primary-dark to-primary hover:from-primary hover:to-primary-dark transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+    >
+      Comienza tu Proyecto Web
+      <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </a>
+  </div>
+</ServiceLayout>

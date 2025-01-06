@@ -1,0 +1,81 @@
+---
+const companies = [
+  {
+    name: "TechCorp",
+    logo: "https://via.placeholder.com/150x50?text=TechCorp",
+    description: "Líder global en soluciones tecnológicas"
+  },
+  {
+    name: "InnovateX",
+    logo: "https://via.placeholder.com/150x50?text=InnovateX",
+    description: "Pioneros en innovación digital"
+  },
+  {
+    name: "SecureNet",
+    logo: "https://via.placeholder.com/150x50?text=SecureNet",
+    description: "Expertos en ciberseguridad empresarial"
+  },
+  {
+    name: "DataFlow",
+    logo: "https://via.placeholder.com/150x50?text=DataFlow",
+    description: "Especialistas en análisis de datos"
+  },
+  {
+    name: "CloudMasters",
+    logo: "https://via.placeholder.com/150x50?text=CloudMasters",
+    description: "Líderes en soluciones cloud"
+  },
+  {
+    name: "AIVision",
+    logo: "https://via.placeholder.com/150x50?text=AIVision",
+    description: "Innovadores en inteligencia artificial"
+  }
+];
+---
+
+<section class="py-16 bg-gray-50 dark:bg-gray-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+        Empresas que Confían en Nosotros
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300">
+        Colaboramos con líderes de la industria para ofrecer soluciones excepcionales
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+      {companies.map(company => (
+        <div class="group relative">
+          <div class="bg-white dark:bg-gray-700 p-4 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <img 
+              src={company.logo} 
+              alt={company.name}
+              class="w-full h-auto filter grayscale group-hover:grayscale-0 transition-all duration-300"
+            />
+          </div>
+          <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg text-center">
+              <h3 class="font-bold text-primary-dark dark:text-primary-light">{company.name}</h3>
+              <p class="text-sm text-gray-600 dark:text-gray-300">{company.description}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Certificaciones y Alianzas -->
+    <div class="mt-16 text-center">
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+        Certificaciones y Alianzas Estratégicas
+      </h3>
+      <div class="flex flex-wrap justify-center gap-8">
+        {['AWS Partner', 'Microsoft Gold Partner', 'Google Cloud Partner', 'ISO 27001'].map(cert => (
+          <div class="bg-white dark:bg-gray-700 px-6 py-3 rounded-full shadow-md">
+            <span class="text-primary-dark dark:text-primary-light font-medium">{cert}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

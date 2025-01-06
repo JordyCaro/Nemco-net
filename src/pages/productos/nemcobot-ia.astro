@@ -1,0 +1,156 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const features = [
+  "Integración nativa con WhatsApp Business API",
+  "IA conversacional avanzada con GPT-4",
+  "Personalización completa de respuestas",
+  "Análisis de sentimientos en tiempo real",
+  "Dashboard de métricas y analytics",
+  "Integración con CRM",
+  "Soporte multiidioma",
+  "Respuestas automatizadas 24/7"
+];
+
+const useCases = [
+  {
+    title: "Atención al Cliente",
+    description: "Respuestas instantáneas a preguntas frecuentes y gestión de consultas básicas."
+  },
+  {
+    title: "Ventas",
+    description: "Calificación de leads y proceso de ventas automatizado."
+  },
+  {
+    title: "Soporte Técnico",
+    description: "Diagnóstico inicial y solución de problemas comunes."
+  }
+];
+---
+
+<Layout title="NemcoBot IA - Chatbot Inteligente">
+  <main class="pt-32 pb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Hero Section -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            NemcoBot IA
+            <span class="text-primary-dark dark:text-primary-light">
+              Tu Asistente Virtual 24/7
+            </span>
+          </h1>
+          <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            Automatiza tu atención al cliente con inteligencia artificial avanzada. 
+            NemcoBot aprende de cada interacción para ofrecer respuestas más precisas y personalizadas.
+          </p>
+          <div class="flex gap-4">
+            <a 
+              href="/contacto" 
+              class="inline-flex items-center px-6 py-3 rounded-lg text-white bg-primary-dark hover:bg-primary transition-colors duration-200"
+            >
+              Conoce Más
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1677442136019-21780ecad995"
+              alt="NemcoBot IA Demo"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Características</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map(feature => (
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+              <div class="flex items-center gap-3">
+                <svg class="w-6 h-6 text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{feature}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Demo Section -->
+      <section id="demo" class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Demo Interactiva</h2>
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl">
+          <div class="aspect-video rounded-xl overflow-hidden">
+            <img 
+              src="https://via.placeholder.com/1200x675?text=Demo+Video"
+              alt="Demo NemcoBot"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Use Cases -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Casos de Uso</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          {useCases.map(useCase => (
+            <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+              <h3 class="text-xl font-bold mb-4">{useCase.title}</h3>
+              <p class="text-gray-600 dark:text-gray-300">{useCase.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-center mb-12">Planes y Precios</h2>
+        <div class="max-w-3xl mx-auto">
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl">
+            <div class="text-center mb-8">
+              <span class="text-5xl font-bold text-primary-dark">$49.99</span>
+              <span class="text-gray-600 dark:text-gray-300">/mes</span>
+            </div>
+            <ul class="space-y-4 mb-8">
+              <li class="flex items-center gap-3">
+                <svg class="w-6 h-6 text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Hasta 1,000 conversaciones mensuales</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-6 h-6 text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Personalización completa</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-6 h-6 text-primary-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Soporte prioritario</span>
+              </li>
+            </ul>
+            <div class="text-center">
+              <a 
+                href="/contacto" 
+                class="inline-flex items-center px-8 py-4 rounded-xl text-white bg-gradient-to-r from-primary-dark to-primary hover:from-primary hover:to-primary-dark transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
+              >
+                Comenzar Ahora
+                <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets';
+import catKeyboard from '../assets/img/cat-keyboard.webp';
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+  <!-- Animated background elements -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute -top-1/2 -left-1/2 w-full h-full transform rotate-12 bg-gradient-to-br from-primary-light/10 to-transparent dark:from-primary-dark/20 animate-pulse-slow"></div>
+    <div class="absolute -bottom-1/2 -right-1/2 w-full h-full transform -rotate-12 bg-gradient-to-tl from-secondary-light/10 to-transparent dark:from-secondary-dark/20 animate-pulse-slow delay-150"></div>
+  </div>
+
+  <!-- Tech pattern overlay -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-y-0 left-0 w-1/2 bg-grid-pattern"></div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="text-center lg:text-left">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+          Transformamos Ideas en 
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-dark to-secondary-dark dark:from-primary-light dark:to-secondary-light">
+            Soluciones Digitales
+          </span>
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
+          Expertos en desarrollo web y ciberseguridad, creamos soluciones tecnológicas innovadoras que impulsan el crecimiento de tu negocio.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <a 
+            href="/contacto" 
+            class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-gradient-to-r from-primary-dark to-secondary-dark hover:from-primary hover:to-secondary transition-all duration-300 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          >
+            Comienza tu Proyecto
+            <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a 
+            href="#featured-services" 
+            class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-gray-700 dark:text-white border-2 border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300 rounded-xl"
+          >
+            Explorar Servicios
+            <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Interactive 3D element or animation -->
+      <div class="relative">
+        <div class="aspect-square w-full max-w-lg mx-auto">
+          <!-- Add a modern 3D illustration or animation here -->
+          <div class="absolute inset-0 bg-gradient-to-br from-primary-light/20 to-secondary-light/20 dark:from-primary-dark/20 dark:to-secondary-dark/20 rounded-3xl transform rotate-6 animate-pulse"></div>
+          <div class="absolute inset-0 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl transform -rotate-6 backdrop-blur-sm">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <!-- Add your hero image or animation here -->
+              <Image
+              src={catKeyboard}
+              alt="Gato Programador"
+              class="rounded-2xl shadow-2xl transform hover:scale-105 transition-duration-300 w-full max-w-md mx-auto"
+            />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust indicators -->
+    <div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700">
+      <p class="text-center text-sm text-gray-500 dark:text-gray-400 mb-6">Empresas que confían en nosotros</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-50 hover:opacity-100 transition-opacity duration-300">
+        <!-- Add trusted company logos here -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+  }
+}
+</style>

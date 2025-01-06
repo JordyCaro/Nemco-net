@@ -1,0 +1,48 @@
+---
+import FeaturedService from './FeaturedService.astro';
+---
+
+<section id="featured-services" class="py-20 relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Servicios <span class="text-primary-dark dark:text-primary-light">Destacados</span>
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+        Soluciones tecnológicas de vanguardia diseñadas para impulsar tu negocio al siguiente nivel
+      </p>
+    </div>
+
+    <FeaturedService
+      title="Desarrollo Web Profesional"
+      description="Creamos experiencias web excepcionales que cautivan a tus usuarios y potencian tu presencia digital. Nuestro equipo combina diseño innovador con tecnología de punta para crear soluciones web que destacan."
+      features={[
+        "Diseño responsivo y moderno",
+        "Optimización SEO y rendimiento",
+        "Integración con APIs y sistemas",
+        "Experiencia de usuario excepcional",
+        "Código limpio y mantenible"
+      ]}
+      image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2015"
+      color="primary"
+      href="/servicios/desarrollo-web"
+      imagePosition="right"
+    />
+
+    <FeaturedService
+      title="Ciberseguridad y DevSecOps"
+      description="Protege tu negocio digital con nuestras soluciones avanzadas de ciberseguridad. Implementamos las mejores prácticas de DevSecOps para garantizar la seguridad en cada etapa del desarrollo."
+      features={[
+        "Auditorías de seguridad completas",
+        "Implementación de DevSecOps",
+        "Protección contra amenazas",
+        "Monitoreo 24/7",
+        "Cumplimiento normativo"
+      ]}
+      image="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070"
+      color="accent"
+      href="/servicios/ciberseguridad"
+      imagePosition="left"
+    />
+  </div>
+</section>

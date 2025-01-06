@@ -1,0 +1,202 @@
+---
+import ServiceLayout from '../../layouts/ServiceLayout.astro';
+import { Image } from 'astro:assets';
+
+const title = "Consultoría Técnica";
+const description = "Asesoramiento experto para optimizar tu estrategia tecnológica y potenciar tu crecimiento digital.";
+---
+
+<ServiceLayout {title} {description} color="accent">
+  <article class="prose prose-lg dark:prose-invert max-w-none">
+    <h1 class="text-4xl font-bold text-center mb-8">{title}</h1>
+    
+    <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+      <div>
+        <p class="text-xl mb-6">
+          Nuestro equipo de expertos te guía en la transformación digital de tu negocio. 
+          Proporcionamos asesoramiento estratégico y soluciones personalizadas para 
+          optimizar tus procesos tecnológicos y maximizar el retorno de inversión.
+        </p>
+        <div class="flex gap-4">
+          <a href="/contacto" class="inline-flex items-center px-6 py-3 rounded-lg text-white bg-accent-dark hover:bg-accent transition-colors duration-200">
+            Agendar Consulta
+          </a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2070"
+            alt="Consultoría Técnica"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Áreas de Consultoría</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl <boltAction type="file" filePath="src/pages/servicios/consultoria-tecnica.astro">rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Estrategia Digital</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Planificación tecnológica</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Roadmap de innovación</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Análisis de competencia</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Optimización Técnica</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Auditoría de sistemas</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Mejora de rendimiento</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Seguridad informática</span>
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+          <h3 class="text-xl font-semibold mb-4">Transformación Digital</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Automatización de procesos</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Integración de sistemas</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-accent-dark flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Gestión del cambio</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Metodología de Trabajo</h2>
+      <div class="grid md:grid-cols-4 gap-8">
+        {[
+          {
+            title: "Diagnóstico",
+            description: "Evaluación completa de tu situación actual y necesidades."
+          },
+          {
+            title: "Estrategia",
+            description: "Desarrollo de plan de acción personalizado."
+          },
+          {
+            title: "Implementación",
+            description: "Ejecución de soluciones y mejoras propuestas."
+          },
+          {
+            title: "Seguimiento",
+            description: "Monitoreo continuo y ajustes según resultados."
+          }
+        ].map(step => (
+          <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
+            <h3 class="text-xl font-semibold mb-3">{step.title}</h3>
+            <p class="text-gray-600 dark:text-gray-300">{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Beneficios</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold mb-4">Para Empresas</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Reducción de costos operativos
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Mayor eficiencia en procesos
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Ventaja competitiva
+            </li>
+          </ul>
+        </div>
+        <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-bold mb-4">Para Equipos</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Mejora de habilidades técnicas
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Adopción de mejores prácticas
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-6 h-6 text-accent-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              Cultura de innovación
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="text-center">
+      <a href="/contacto" class="inline-flex items-center px-8 py-4 rounded-xl text-white bg-gradient-to-r from-accent-dark to-accent hover:from-accent hover:to-accent-dark transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105">
+        Solicita una Consultoría
+        <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </article>
+</ServiceLayout>
