@@ -26,7 +26,7 @@ const { steps, color } = Astro.props;
           <div class={`w-12 h-12 rounded-full bg-${color}-light dark:bg-${color}-dark flex items-center justify-center mb-4 mx-auto`}>
             <span class="text-white font-bold">{index + 1}</span>
           </div>
-          <h3 class="text-xl font-bold text-center mb-4">{step.title}</h3>
+          <h3 class="text-xl font-bold text-center mb-4 text-gray-600 dark:text-white">{step.title}</h3>
           <p class="text-gray-600 dark:text-gray-300 text-center">{step.description}</p>
         </div>
       </div>
