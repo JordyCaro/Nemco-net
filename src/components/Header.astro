@@ -8,13 +8,21 @@ import ProductDropdown from './ProductDropdown';
 <header class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50 transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center py-4">
-      <div class="flex items-center gap-2">
-        <!-- <img src="/logo.svg" alt="Nemco-Net Logo" class="h-10 w-auto" /> -->
+      <!-- Contenedor del logo y menú en móviles -->
+      <div class="flex items-center gap-4">
+         <!-- <img src="/logo.svg" alt="Nemco-Net Logo" class="h-10 w-auto" /> -->
         <a href="/" class="text-2xl font-bold text-primary-dark dark:text-primary-light hover:scale-105 transition-transform duration-200">
           Nemco-Net
         </a>
+        <!-- Botón Menú Hamburguesa -->
+        <button id="menu-toggle" class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-4 6h-8" />
+          </svg>
+        </button>
       </div>
 
+      <!-- Menú en pantallas grandes -->
       <nav class="hidden md:flex items-center gap-8">
         <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-primary-dark dark:hover:text-primary-light">
           Nosotros
@@ -35,13 +43,73 @@ import ProductDropdown from './ProductDropdown';
       <div class="flex items-center gap-4">
         <ThemeToggle client:load />
         <!-- <LanguageToggle client:load /> -->
-        <a
-          href="/contacto"
-          class="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-dark hover:bg-primary dark:bg-primary dark:hover:bg-primary-dark transition-colors duration-200"
-        >
+        <a href="/contacto" class="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-dark hover:bg-primary dark:bg-primary dark:hover:bg-primary-dark transition-colors duration-200">
           Contacto
         </a>
       </div>
     </div>
+
+    <!-- Menú móvil -->
+    <nav id="mobile-menu" class="hidden md:hidden flex flex-col items-center gap-4 py-4 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+      <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-primary-dark dark:hover:text-primary-light">Nosotros</a>
+      <ServiceDropdown client:load />
+      <a href="#services" class="text-gray-700 dark:text-gray-300 hover:text-primary-dark dark:hover:text-primary-light">Más Servicios</a>
+      <ProductDropdown client:load />
+      <a href="#team" class="text-gray-700 dark:text-gray-300 hover:text-primary-dark dark:hover:text-primary-light">Equipo</a>
+      <a href="#testimonials" class="text-gray-700 dark:text-gray-300 hover:text-primary-dark dark:hover:text-primary-light">Testimonios</a>
+      <a href="/contacto" class="menu-link inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-dark hover:bg-primary dark:bg-primary dark:hover:bg-primary-dark transition-colors duration-200">
+        Contacto
+      </a>
+    </nav>
   </div>
 </header>
+
+<script>
+  function initializeMenu() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLinks = document.querySelectorAll('.menu-link');
+    const dropdownLinks = document.querySelectorAll('.dropdown-link'); // Links dentro de los dropdowns
+
+    if (!menuToggle || !mobileMenu) return;
+
+    // Reset de eventos para evitar duplicados
+    menuToggle.removeEventListener('click', toggleMenu);
+    menuLinks.forEach(link => link.removeEventListener('click', closeMenu));
+    dropdownLinks.forEach(link => link.removeEventListener('click', handleDropdownClick));
+
+    function toggleMenu() {
+      mobileMenu.classList.toggle('hidden');
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+    }
+
+    function handleDropdownClick(event) {
+      event.preventDefault(); // Evita el comportamiento por defecto del enlace
+      const sectionId = event.target.getAttribute('href'); // Obtiene el ID de la sección destino
+      
+      if (window.location.pathname !== '/') {
+        // Si no estamos en la página principal, redirigir y luego desplazarse a la sección
+        window.location.href = '/' + sectionId;
+      } else {
+        // Si ya estamos en la página principal, solo hacer scroll a la sección
+        document.querySelector(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      closeMenu(); // Cierra el menú después de hacer clic
+    }
+
+    // Agregar eventos nuevamente
+    menuToggle.addEventListener('click', toggleMenu);
+    menuLinks.forEach(link => link.addEventListener('click', closeMenu));
+    dropdownLinks.forEach(link => link.addEventListener('click', handleDropdownClick));
+  }
+
+  // Inicializar el menú cuando la página carga
+  document.addEventListener('DOMContentLoaded', initializeMenu);
+  document.addEventListener('astro:after-swap', initializeMenu); // Reaplicar en frameworks con navegación en cliente
+</script>
+
+
