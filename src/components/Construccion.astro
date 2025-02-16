@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import catKeyboard from '../../assets/img/cat-keyboard.webp';
+
+
+
+---
+
+<Layout title="Página en Construcción">
+  <main class="flex flex-col items-center justify-center min-h-screen text-center px-6">
+    <div class="max-w-3xl">
+      <!-- Imagen o Ilustración -->
+      <div class="relative mb-8">
+        <Image
+        src={catKeyboard}
+        alt="Gato Programador"
+        class="rounded-2xl shadow-2xl transform hover:scale-105 transition-duration-300 w-full max-w-md mx-auto"
+      />
+      </div>
+
+      <!-- Texto principal -->
+      <h1 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        Estamos Trabajando en Algo Increíble
+      </h1>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+        Esta página estará disponible muy pronto. Mientras tanto, síguenos en nuestras redes o contáctanos para más información.
+      </p>
+
+      <!-- Botón de regreso o contacto -->
+      <div class="flex justify-center gap-4">
+        <a 
+          href="/" 
+          class="inline-flex items-center px-6 py-3 rounded-lg text-white bg-primary-dark hover:bg-primary transition-colors duration-200"
+        >
+          Volver al Inicio
+        </a>
+        <a 
+          href="/contacto" 
+          class="inline-flex items-center px-6 py-3 rounded-lg text-gray-900 bg-gray-200 dark:bg-gray-700 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
+        >
+          Contáctanos
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>
