@@ -16,19 +16,19 @@ const { title, description, features, price, icon, color, demoUrl } = Astro.prop
   <div class="absolute inset-0 bg-gradient-to-br from-{color}-light/5 to-{color}-dark/5 dark:from-{color}-dark/10 dark:to-{color}-light/10 rounded-2xl"></div>
   
   <div class="relative">
-    <div class={`w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-${color}-light to-${color}-dark flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300`}>
+    <div class={`w-20 h-20 bg-gradient-to-br from-${color}-light to-${color}-dark rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg mx-auto`}>
       <span class="text-3xl text-white" set:html={icon} />
     </div>
 
-    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">{title}</h3>
-    <p class="text-gray-600 dark:text-gray-300 mb-6">{description}</p>
+    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">{title}</h3>
+    <p class="text-gray-600 dark:text-gray-300 mb-6 text-center">{description}</p>
 
-    <div class="mb-6">
-      <span class="text-3xl font-bold text-{color}-dark dark:text-{color}-light">{price}</span>
+    <div class="mb-6 text-center">
+      <span class="text-3xl font-bold text-gray-600 dark:text-white">{price}</span>
       <span class="text-gray-500 dark:text-gray-400">/mes</span>
     </div>
 
-    <ul class="space-y-3 mb-8">
+    <ul class="space-y-3 mb-8 flex flex-col items-center">
       {features.map(feature => (
         <li class="flex items-center gap-3">
           <svg class={`w-5 h-5 text-${color}-dark dark:text-${color}-light flex-shrink-0`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -38,9 +38,10 @@ const { title, description, features, price, icon, color, demoUrl } = Astro.prop
         </li>
       ))}
     </ul>
+    
 
     <div class="flex gap-4">
-      <a 
+      <!-- <a 
         href={demoUrl}
         class={`flex-1 inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-gradient-to-r from-${color}-dark to-${color} rounded-lg hover:from-${color} hover:to-${color}-dark transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl`}
       >
@@ -48,7 +49,7 @@ const { title, description, features, price, icon, color, demoUrl } = Astro.prop
         <svg class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
         </svg>
-      </a>
+      </a> -->
       <a 
         href="/contacto"
         class={`flex-1 inline-flex items-center justify-center px-6 py-3 border-2 border-${color}-dark/20 dark:border-${color}-light/20 text-${color}-dark dark:text-${color}-light rounded-lg hover:bg-${color}-light/10 dark:hover:bg-${color}-dark/10 transform hover:scale-105 transition-all duration-200`}

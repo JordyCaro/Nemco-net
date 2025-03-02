@@ -20,11 +20,11 @@ const { features, color } = Astro.props;
   <div class="grid md:grid-cols-3 gap-8">
     {features.map(feature => (
       <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300">
-        <div class={`w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-${color}-light to-${color}-dark flex items-center justify-center`}>
-          <svg class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" set:html={feature.icon} />
+        <div class={`w-20 h-20 bg-gradient-to-br from-${color}-light to-${color}-dark rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg mx-auto`}>
+          <svg class="w-8 h-8 text-white " fill="none" viewBox="0 0 24 24" stroke="currentColor" set:html={feature.icon} />
         </div>
-        <h3 class="text-xl font-bold mb-4">{feature.title}</h3>
-        <p class="text-gray-600 dark:text-gray-300">{feature.description}</p>
+        <h3 class="text-xl font-bold mb-4 text-center text-gray-600 dark:text-white">{feature.title}</h3>
+        <p class="text-gray-600 dark:text-white text-center">{feature.description}</p>
       </div>
     ))}
   </div>

@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
-import vercel from '@astrojs/vercel'; // Importa el adaptador de Vercel
 
 export default defineConfig({
   integrations: [tailwind(), react()],
@@ -34,7 +33,5 @@ export default defineConfig({
     ssr: {
       noExternal: ['@headlessui/react']
     }
-  },
-  // Añade el adaptador de Vercel
-  adapter: vercel(),
+  }
 });

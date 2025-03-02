@@ -8,44 +8,62 @@ import ServiceProcess from '../../components/ServiceProcess.astro';
 const features = [
   {
     title: "Desarrollo Frontend",
-    description: "Interfaces modernas y responsivas que cautivan a tus usuarios desde el primer momento.",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`
+    description: "Creamos interfaces modernas y responsivas para una experiencia de usuario fluida en cualquier dispositivo.",
+    icon: `<path stroke="#FF5F15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />`
   },
   {
     title: "Desarrollo Backend",
-    description: "APIs robustas y escalables que potencian tu aplicación con seguridad y rendimiento.",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />`
+    description: "Construimos APIs seguras y eficientes con arquitecturas modernas y bases de datos optimizadas.",
+    icon: `<path stroke="#FF5F15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />`
   },
   {
     title: "Optimización SEO",
-    description: "Mejora tu visibilidad en buscadores y atrae más tráfico orgánico a tu sitio.",
-    icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />`
+    description: "Mejoramos el posicionamiento en buscadores y aumentamos la visibilidad de tu marca con estrategias avanzadas.",
+    icon: `<path stroke="#FF5F15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />`
+  },
+  {
+    title: "Desarrollo de APIs",
+    description: "Creamos APIs robustas y escalables para facilitar la integración entre sistemas, mejorando la conectividad y el rendimiento.",
+    icon: `<path stroke="#FF5F15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v8m4-4h-8m0 8v4h8m-4 4v-8" />`
+  },
+  {
+    title: "E-commerce Solutions",
+    description: "Creamos soluciones de comercio electrónico escalables y seguras, optimizando tu tienda online para el crecimiento.",
+    icon: `<path stroke="#FF5F15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8h18M9 8l-3 10h12L15 8" />`
+  },
+  {
+    title: "Gestión de Bases de Datos",
+    description: "Optimizamos tus bases de datos para garantizar un rendimiento sólido y una gestión eficiente de los datos a gran escala.",
+    icon: `<path stroke="#FF5F15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 1v6m0 0c2 0 3 2 3 3s-1 3-3 3m0 0H9m3 0v7m0 0h-3m3 0c1 0 2 1 2 2s-1 2-2 2H9c-1 0-2-1-2-2s1-2 2-2h3m3 0v1a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-1" />`
   }
 ];
 
+
+
 const technologies = [
-  "React", "Next.js", "Vue.js", "Node.js",
-  "TypeScript", "GraphQL", "MongoDB", "PostgreSQL"
+  "Angular", "TypeScript", "React", "Javascript", "Node.js",
+  "Next.js", "PHP", "Java", "Nest.js", "MySQL", "MongoDB", "PostgreSQL"
 ];
 
 const steps = [
   {
     title: "Planificación",
-    description: "Analizamos tus necesidades y definimos la mejor estrategia."
+    description: "Analizamos a fondo tus necesidades y objetivos para definir una estrategia clara y alineada con tus expectativas. Establecemos los requisitos del proyecto, diseñamos la arquitectura técnica y creamos un plan de trabajo detallado. Nuestro enfoque garantiza una base sólida para el desarrollo, optimizando tiempos y recursos desde el inicio."
   },
   {
     title: "Diseño",
-    description: "Creamos interfaces intuitivas centradas en el usuario."
+    description: "Creamos interfaces intuitivas y atractivas, priorizando la experiencia del usuario en cada detalle. Aplicamos principios de usabilidad y accesibilidad para asegurar que la navegación sea fluida, clara y efectiva. Además, trabajamos en la coherencia visual para reflejar la identidad de tu marca, logrando un equilibrio perfecto."
   },
   {
     title: "Desarrollo",
-    description: "Implementamos tu solución con las mejores prácticas."
+    description: "Implementamos tu solución utilizando tecnologías modernas y metodologías ágiles, asegurando un código limpio, escalable y optimizado. Nos enfocamos en la seguridad, el rendimiento y la estabilidad del sistema, aplicando las mejores prácticas para que cada funcionalidad cumpla con los más altos estándares de calidad y eficiencia."
   },
   {
     title: "Lanzamiento",
-    description: "Desplegamos y optimizamos tu aplicación."
+    description: "Desplegamos tu aplicación en el entorno de producción, asegurando compatibilidad y rendimiento óptimo. Realizamos pruebas finales, monitoreo post-lanzamiento y ajustes de optimización para garantizar una experiencia estable y sin interrupciones. También ofrecemos soporte inicial para resolver cualquier imprevisto y garantizar una transición fluida."
   }
 ];
+
 ---
 
 <ServiceLayout 
@@ -62,9 +80,10 @@ const steps = [
 
   <ServiceFeatures features={features} color="primary" />
   
+  <ServiceProcess steps={steps} color="primary" />
+
   <ServiceTechnologies technologies={technologies} color="primary" />
   
-  <ServiceProcess steps={steps} color="primary" />
 
   <div class="text-center">
     <a 
@@ -77,4 +96,5 @@ const steps = [
       </svg>
     </a>
   </div>
+  <br><br>
 </ServiceLayout>
