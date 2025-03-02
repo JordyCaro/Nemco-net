@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import jordy from '../assets/img/profile.jpg';
+import xiomy from '../assets/img/profileXiom.jpg';
 import Nemo from '../assets/img/Img-nemo.jpeg';
 
 ---
@@ -46,8 +47,8 @@ import Nemo from '../assets/img/Img-nemo.jpeg';
       <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
         <div class="flex justify-center pt-6">
           <div class="h-32 w-32 rounded-full border-4 border-accent-light dark:border-accent-dark overflow-hidden">
-            <img
-              src="https://i.pravatar.cc/300?img=5"
+            <Image
+              src={xiomy}
               alt="Xiomara Palacios"
               class="w-full h-full object-cover"
             />
@@ -66,6 +67,7 @@ import Nemo from '../assets/img/Img-nemo.jpeg';
           </div>
         </div>
       </div>
+
 
       <!-- Nemo Card -->
       <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300">
