@@ -3,6 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 
 export default defineConfig({
+  site: 'https://nemco-net.com',
   integrations: [tailwind(), react()],
   compressHTML: true,
   build: {
@@ -32,6 +33,12 @@ export default defineConfig({
     },
     ssr: {
       noExternal: ['@headlessui/react']
+    },
+    optimizeDeps: {
+      include: ['react', 'react-dom', '@headlessui/react']
     }
+  },
+  experimental: {
+    contentCollectionCache: true
   }
 });

@@ -10,9 +10,13 @@ import ProductDropdown from './ProductDropdown';
     <div class="flex justify-between items-center py-4">
       <!-- Contenedor del logo y menú en móviles -->
       <div class="flex items-center gap-4">
-         <!-- <img src="/logo.svg" alt="Nemco-Net Logo" class="h-10 w-auto" /> -->
-        <a href="/" class="text-2xl font-bold text-primary-dark dark:text-primary-light hover:scale-105 transition-transform duration-200">
-          Nemco-Net
+        <a href="/" class="flex items-center gap-3 hover:scale-105 transition-transform duration-200">
+          <img 
+            src="/logo.png" 
+            alt="Nemco-Net Logo" 
+            class="w-auto h-auto max-h-14 md:max-h-16 lg:max-h-20 object-contain"
+            loading="eager"
+          />
         </a>
         <!-- Botón Menú Hamburguesa -->
         <button id="menu-toggle" class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none">

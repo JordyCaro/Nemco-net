@@ -6,23 +6,108 @@ import { ViewTransitions } from 'astro:transitions';
 interface Props {
   title: string;
   description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
 }
 
 const { 
   title,
-  description = "Transform your ideas into digital solutions with our expert web development services"
+  description = "Transforma tus ideas en soluciones digitales con nuestros servicios expertos de desarrollo web, móvil y soluciones cloud. Nemco-Net - Tu socio tecnológico de confianza.",
+  keywords = "desarrollo web, desarrollo móvil, soluciones cloud, inteligencia artificial, chatbot, aplicaciones web, React, Astro, programación, tecnología, software",
+  image = "/src/assets/img/Logo-nombre.nemco-sinfondo.png",
+  url = Astro.url.href,
+  type = "website"
 } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="keywords" content={keywords} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Nemco-Net" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#FF5F15" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content="Nemco-Net" />
+    <meta property="og:locale" content="es_ES" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    
+    <!-- Additional SEO -->
     <meta name="generator" content={Astro.generator} />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/logo.png" as="image" type="image/png" />
+    <link rel="preload" href="/src/assets/img/cat-keyboard.webp" as="image" type="image/webp" />
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+    
     <title>{title}</title>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Nemco-Net",
+      "description": "Transforma tus ideas en soluciones digitales con nuestros servicios expertos de desarrollo web, móvil y soluciones cloud.",
+      "url": "https://nemco-net.com",
+      "logo": "https://nemco-net.com/logo.png",
+      "sameAs": [
+        "https://github.com/nemco-net",
+        "https://linkedin.com/company/nemco-net"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": ["Spanish", "English"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CO"
+      },
+      "foundingDate": "2024",
+      "services": [
+        "Desarrollo Web",
+        "Desarrollo Móvil", 
+        "Soluciones Cloud",
+        "Inteligencia Artificial"
+      ]
+    }
+    </script>
+    
     <ViewTransitions />
   </head>
   <body class="bg-white dark:bg-gray-900 transition-colors duration-300">
